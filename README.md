@@ -4,16 +4,16 @@ Simple implementation of the game 21, using ES6 vanilla JavaScript.
 
 ## Setup
 
-> npm install
+> run **npm install**
 
-> npm install -g http-server
+> run **npm install -g http-server**
 
 ## Running App
 
-> type http-server
+> in directory root run **http-server**
 
-> open http://localhost:8080/index.html
+> go to browser and open **http://localhost:8080/index.html**
 
 ## Tests
 
-Tests are written in jasmine and can be accessed by loading http://localhost:8080/spec/my_spec_runner.html
+Tests are written in jasmine and can be run by loading **http://localhost:8080/spec/my_spec_runner.html**
