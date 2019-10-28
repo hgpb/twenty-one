@@ -1,0 +1,15 @@
+{
+  "name": "TwentyOne",
+  "version": "1.0.0",
+  "description": "Beat the dealer at 21",
+  "main": "./twentyone.js",
+  "scripts": {
+    "test": "./node_modules/jasmine/bin/jasmine"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine-core": "^3.5.0"
+  }
+}

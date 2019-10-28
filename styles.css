@@ -1,0 +1,191 @@
+h3 {
+	font-size: 1.5rem;
+	margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+#player, #dealer {
+	display: flex;
+}
+.cards {
+	display: flex;
+}
+.cards div {
+	margin: 0.1vw;
+}
+.equal, .score {
+	padding: 0 1vw 0 1vw; 
+	font-weight: bold; 
+	font-size: 3vw; 
+	line-height: 23.5vw;
+}
+.score { 
+	padding: 0 1vw 0 0; 
+}
+.card {
+	background: url(./images/deck_cards.svg) no-repeat;
+	background-size: 200vw;
+	display: inline-block;
+	height: 23.5vw;
+	width: 16.4vw;
+	border-radius: 1.4vw;
+}
+
+.card.spades.ace {
+	background-position: 0vw 0vw;
+}
+.card.spades.two {
+	background-position: -15.3vw 0;
+}
+.card.spades.three {
+	background-position: -30.6vw 0;
+}
+.card.spades.four {
+	background-position: -45.9vw 0;
+}
+.card.spades.five {
+	background-position: -61.2vw 0;
+}
+.card.spades.six {
+	background-position: -76.6vw 0;
+}
+.card.spades.seven {
+	background-position: -91.8vw 0;
+}
+.card.spades.eight {
+	background-position: -107.1vw 0;
+}
+.card.spades.nine {
+	background-position: -122.4vw 0;
+}
+.card.spades.ten {
+	background-position: -137.7vw 0;
+}
+.card.spades.jack {
+	background-position: -153vw 0;
+}
+.card.spades.queen {
+	background-position: -168.3vw 0;
+}
+.card.spades.king {
+	background-position: -183.6vw 0;
+}
+
+.card.hearts.ace {
+	background-position: 0vw -22.35vw;
+}
+.card.hearts.two {
+	background-position: -15.3vw -22.35vw;
+}
+.card.hearts.three {
+	background-position: -30.6vw -22.35vw;
+}
+.card.hearts.four {
+	background-position: -45.9vw -22.35vw;
+}
+.card.hearts.five {
+	background-position: -61.2vw -22.35vw;
+}
+.card.hearts.six {
+	background-position: -76.6vw -22.35vw;
+}
+.card.hearts.seven {
+	background-position: -91.8vw -22.35vw;
+}
+.card.hearts.eight {
+	background-position: -107.1vw -22.35vw;
+}
+.card.hearts.nine {
+	background-position: -122.4vw -22.35vw;
+}
+.card.hearts.ten {
+	background-position: -137.7vw -22.35vw;
+}
+.card.hearts.jack {
+	background-position: -153vw -22.35vw;
+}
+.card.hearts.queen {
+	background-position: -168.3vw -22.35vw;
+}
+.card.hearts.king {
+	background-position: -183.6vw -22.35vw;
+}
+
+.card.diamonds.ace {
+	background-position: 0vw -44.75vw;
+}
+.card.diamonds.two {
+	background-position: -15.3vw -44.75vw;
+}
+.card.diamonds.three {
+	background-position: -30.6vw -44.75vw;
+}
+.card.diamonds.four {
+	background-position: -45.9vw -44.75vw;
+}
+.card.diamonds.five {
+	background-position: -61.2vw -44.75vw;
+}
+.card.diamonds.six {
+	background-position: -76.6vw -44.75vw;
+}
+.card.diamonds.seven {
+	background-position: -91.8vw -44.75vw;
+}
+.card.diamonds.eight {
+	background-position: -107.1vw -44.75vw;
+}
+.card.diamonds.nine {
+	background-position: -122.4vw -44.75vw;
+}
+.card.diamonds.ten {
+	background-position: -137.7vw -44.75vw;
+}
+.card.diamonds.jack {
+	background-position: -153vw -44.75vw;
+}
+.card.diamonds.queen {
+	background-position: -168.3vw -44.75vw;
+}
+.card.diamonds.king {
+	background-position: -183.6vw -44.75vw;
+}
+
+.card.clubs.ace {
+	background-position: 0vw -67vw;
+}
+.card.clubs.two {
+	background-position: -15.3vw -67vw;
+}
+.card.clubs.three {
+	background-position: -30.6vw -67vw;
+}
+.card.clubs.four {
+	background-position: -45.9vw -67vw;
+}
+.card.clubs.five {
+	background-position: -61.2vw -67vw;
+}
+.card.clubs.six {
+	background-position: -76.6vw -67vw;
+}
+.card.clubs.seven {
+	background-position: -91.8vw -67vw;
+}
+.card.clubs.eight {
+	background-position: -107.1vw -67vw;
+}
+.card.clubs.nine {
+	background-position: -122.4vw -67vw;
+}
+.card.clubs.ten {
+	background-position: -137.7vw -67vw;
+}
+.card.clubs.jack {
+	background-position: -153vw -67vw;
+}
+.card.clubs.queen {
+	background-position: -168.3vw -67vw;
+}
+.card.clubs.king {
+	background-position: -183.6vw -67vw;
+}
