@@ -39,13 +39,13 @@ describe("Deck", () => {
             deck = new Deck();
         });
 
-        it("should create correct number of hand", () => {
+        it("should create correct number of cards", () => {
             deck.create();
 
             expect(deck.getCards().length).toEqual(52);
         });
 
-        it("should create correct set of hand", () => {
+        it("should create correct set of cards", () => {
             deck.create();
 
             expect(deck.getCards()[0]).toEqual({name: "ace", value: 11, suit: "clubs"});
@@ -60,7 +60,7 @@ describe("Deck", () => {
             deck.create();
         });
 
-        it("should have correct number of hand after shuffle", () => {
+        it("should have correct number of cards after shuffle", () => {
             deck.shuffle();
 
             expect(deck.getCards().length).toEqual(52);

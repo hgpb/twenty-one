@@ -25,7 +25,7 @@ describe("App", () => {
 
     describe("#newGame", () => {
 
-        it("should reset fields", () => {
+        it("should reset fields (spy)", () => {
             const spy = spyOn(app, "resetFields").and.callThrough();
 
             app.newGame();
@@ -124,10 +124,12 @@ describe("App", () => {
     describe("#addCardToHand", () => {
         let deck;
         let player;
+        let dealer;
 
         beforeEach(() => {
             deck = new Deck().create().shuffle();
             player = new Player("player");
+            dealer = new Player("dealer");
         });
 
         it("should add cards to players hand", () => {
@@ -140,7 +142,6 @@ describe("App", () => {
         });
 
         it("should add cards to dealers hand", () => {
-            const dealer = new Player("dealer");
 
             app.addCardToHand(deck.getTopCard(), dealer);
             app.addCardToHand(deck.getTopCard(), dealer);
@@ -179,6 +180,16 @@ describe("App", () => {
             app.addCardToHand(deck.getTopCard(), player);
 
             expect(spy).toHaveBeenCalled();
+        });
+
+        it("should have correct number of cards in deck after adding to player and dealer", () => {
+
+            app.addCardToHand(deck.getTopCard(), player);
+            app.addCardToHand(deck.getTopCard(), player);
+            app.addCardToHand(deck.getTopCard(), dealer);
+            app.addCardToHand(deck.getTopCard(), dealer);
+
+            expect(deck.cards.length).toBe(48);
         });
 
         it("should end game if no more cards exist (spy)", () => {
@@ -370,7 +381,7 @@ describe("App", () => {
             dealer = new Player("dealer");
         });
 
-        it("should reset fields if player and dealer hands are empty", () => {
+        it("should reset fields if player and dealer hands are empty (spy)", () => {
             player.hand = [];
             dealer.hand = [];
 
@@ -379,7 +390,7 @@ describe("App", () => {
             expect(spy).toHaveBeenCalled();
         });
 
-        it("should not reset fields if player hand exists", () => {
+        it("should not reset fields if player hand exists (spy)", () => {
             player.hand = [{ name: "ace", suit: "clubs", value: 11 }];
             dealer.hand = [];
 
@@ -388,7 +399,7 @@ describe("App", () => {
             expect(spy).not.toHaveBeenCalled();
         });
 
-        it("should not reset fields if dealer hand exists", () => {
+        it("should not reset fields if dealer hand exists (spy)", () => {
             player.hand = [];
             dealer.hand = [{ name: "ace", suit: "clubs", value: 11 }];
 
@@ -397,7 +408,7 @@ describe("App", () => {
             expect(spy).not.toHaveBeenCalled();
         });
 
-        it("should not reset fields if dealer and player hands exist", () => {
+        it("should not reset fields if dealer and player hands exist (spy)", () => {
             player.hand = [{ name: "ace", suit: "spades", value: 11 }];
             dealer.hand = [{ name: "ace", suit: "clubs", value: 11 }];
 
