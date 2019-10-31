@@ -8,14 +8,14 @@ describe("Deck", () => {
     });
 
     it("should initialise cards", () => {
-        expect(deck.cards).toEqual([]);
+        expect(deck.getCards()).toEqual([]);
     });
 
-    it("should set suits", () => {
+    it("should initialise suits", () => {
         expect(deck.suits).toEqual(["clubs", "diamonds", "hearts", "spades"]);
     });
 
-    it("should set values", () => {
+    it("should initialise values", () => {
         expect(deck.values).toEqual([
             { name: "ace", value: 11 },
             { name: "two", value: 2 },
@@ -39,17 +39,17 @@ describe("Deck", () => {
             deck = new Deck();
         });
 
-        it("should create correct number of cards", () => {
+        it("should create correct number of hand", () => {
             deck.create();
 
-            expect(deck.cards.length).toEqual(52);
+            expect(deck.getCards().length).toEqual(52);
         });
 
-        it("should create correct set of cards", () => {
+        it("should create correct set of hand", () => {
             deck.create();
 
-            expect(deck.cards[0]).toEqual({name: "ace", value: 11, suit: "clubs"});
-            expect(deck.cards[51]).toEqual({name: "king", value: 10, suit: "spades"});
+            expect(deck.getCards()[0]).toEqual({name: "ace", value: 11, suit: "clubs"});
+            expect(deck.getCards()[51]).toEqual({name: "king", value: 10, suit: "spades"});
         });
     });
 
@@ -60,10 +60,10 @@ describe("Deck", () => {
             deck.create();
         });
 
-        it("should have correct number of cards after shuffle", () => {
+        it("should have correct number of hand after shuffle", () => {
             deck.shuffle();
 
-            expect(deck.cards.length).toEqual(52);
+            expect(deck.getCards().length).toEqual(52);
         });
 
         it("should shuffle deck", () => {
@@ -71,7 +71,7 @@ describe("Deck", () => {
 
             deck.shuffle();
 
-            expect(deck.cards).toEqual([{name: "ace"}]);
+            expect(deck.getCards()).toEqual([{name: "ace"}]);
         });
     });
 
