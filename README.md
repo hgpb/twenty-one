@@ -16,4 +16,4 @@ Simple implementation of the game 21, using ES6 vanilla JavaScript.
 
 ## Tests
 
-Tests are written in jasmine and can be run by loading **http://localhost:8080/spec/my_spec_runner.html**
+Tests are written in jasmine and can be run by loading **http://localhost:8080/spec/index.html**
