@@ -1,5 +1,5 @@
 import App from "./lib/App.js";
 
-new App(document).newGame();
+new App(document).startGame();
 
 
